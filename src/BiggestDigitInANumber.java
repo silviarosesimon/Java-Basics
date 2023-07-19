@@ -5,14 +5,12 @@ import java.util.List;
 public class BiggestDigitInANumber {
 
     public static void main(String[] args) {
-        int number = Integer.parseInt(args[0]);
-        System.out.println("Biggest digit in the number : " + number +
-                " is: " + biggestDigitInANumber(number));
+        System.out.println("Biggest digit in the number : " + args[0] +
+                " is: " + biggestDigitInANumber(args[0]));
     }
 
-    public static Character biggestDigitInANumber(int number) {
-        String numString = String.valueOf(number);
-        char[] digits = numString.toCharArray();
+    public static Character biggestDigitInANumber(String number) {
+        char[] digits = number.toCharArray();
         List<Character> digitArray = new ArrayList();
         for (char digit: digits) {
             digitArray.add(digit);
