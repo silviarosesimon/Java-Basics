@@ -10,6 +10,7 @@ public class StringReverse {
     public static String reverseString(String s) {
         if(s == null || s.isEmpty()) {
             return s;
+            //throw new IllegalArgumentException("Not a valid input");
         }
         //StringBuilder without using reverse function
         /*StringBuilder reverseString = new StringBuilder();
