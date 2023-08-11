@@ -11,13 +11,26 @@ public class StringReverse {
         if(s == null || s.isEmpty()) {
             return s;
         }
+        //StringBuilder without using reverse function
         /*StringBuilder reverseString = new StringBuilder();
         for(int i=s.length()-1; i>=0; i--) {
             reverseString.append(s.charAt(i));
         }
         return reverseString.toString();*/
+        //StringBuilder using reverse function
         StringBuilder reverseString = new StringBuilder(s);
         return reverseString.reverse().toString();
+
+        // synchronized, performance overhead
+        //StringBuffer without using reverse function
+        /*StringBuffer reverseString = new StringBuffer();
+        for(int i=s.length()-1; i>=0; i--) {
+            reverseString.append(s.charAt(i));
+        }
+        return reverseString.toString();*/
+        // StringBuffer with reverse function
+        /*StringBuffer reverseString = new StringBuffer(s);
+        return reverseString.reverse().toString();*/
     }
 
     public static String reverseWordsInAString(String s) {
